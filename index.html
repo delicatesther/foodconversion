@@ -7,7 +7,9 @@
   <title>Delicatesther Food Conversion</title>
   <meta name="description" content="A conversion tool for US to European cooking units">
   <meta name="author" content="Delicatesther a.k.a. Esther Kool">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Asap+Condensed:400,400i,600,600i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <link rel="stylesheet" href="dest/css/style.css">
 
   <!--[if lt IE 9]>
@@ -16,20 +18,35 @@
 </head>
 
 <body>
-  <header>
-    <div class="container">
-      <svg viewBox="0 0 450 200">
-        <use xlink:href="dest/img/delicatesther.svg#Layer_1"></use>
+  <header class="header">
+      <a href="http://delicatesther.nl" target="_blank" title="Visit Delicatesther.nl">
+        <svg class="delicatesther" viewBox="0 0 430 185">
+          <use xlink:href="dest/img/delicatesther.svg#Layer_1"></use>
+        </svg>
+      </a>
+      <svg class="foodconversion" viewBox="0 0 100 30">
+        <use xlink:href="dest/img/foodconversion-logo.svg#Layer_1"></use>
       </svg>
       <h1>Delicatesther Food Conversion</h1>
-    </div>
   </header>
   <main>
+
     <div class="container">
-      <section class="introduction">
-        <header><h1>How does this work?</h1></header>
+      <section class="introduction" id="introduction">
+        <header><h1>How does this work?</h1> <span class="close" onclick="closeItem();"></span></header>
         <article>
-          <p>I'm sure you, too, have struggled with the annoyances of the imperial vs metric system. Sticks of butter versus grams. Fahrenheit versus Celcius. And sure, we have Google. But that just looks boring. Here, you can find all manner of cooking-related calculations. Enter the unit you know, get the unit you need; presto!</p>
+          <p>I'm sure you, too, have struggled with the annoyances of the imperial versus the metric system. Sticks of butter versus grams. <br>Fahrenheit versus Celcius.</p>
+          <p>And sure, we have Google. But that just looks boring. </p>
+          <p>Here, you can find all manner of cooking-related calculations.<br>
+          Enter the unit you know, get the unit you need; presto!</p>
+          <button onclick="closeItem();">Got it</button>
+        </article>
+      </section>
+      <section class="temp">
+        <header><h1>Temperature</h1></header>
+        <article>
+          <input placeholder="Fahrenheit" id="fahrenheit">
+          <input placeholder="Celcius" id="celcius">
         </article>
       </section>
       <section class="weight">
@@ -41,20 +58,17 @@
       <section class="cups">
         <header><h1>Cups</h1></header>
       </section>
-      <section class="temp">
-        <header><h1>Temperature</h1></header>
-      </section>
       <section class="misc">
         <header><h1>Miscellaneous</h1></header>
       </section>
     </div>
+    <footer>
+      <div class="wrapper">
+        <p>&copy; Delicatesther</p>
+      </div>
+    </footer>
   </main>
-  <footer>
-    <div class="container">
-      <p>&copy; Delicatesther</p>
-    </div>
-  </footer>
-
-  <script src="dest/js/scripts.js"></script>
+  <script src="dest/js/bundle.js"></script>
+  <script src="dest/js/script.js"></script>
 </body>
 </html>

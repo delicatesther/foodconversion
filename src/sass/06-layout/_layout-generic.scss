@@ -1,21 +1,55 @@
 body {
   background: $creme;
+  background: url('../img/bg.jpg') no-repeat;
+  background-size: cover;
   color: $near-black;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
 }
 
 main {
+  min-height: 100vh;
   display: flex;
-  flex: 1;
+  flex-direction: column;
 }
-
 .container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
   max-width: 1250px;
   margin: 0 auto;
 }
-
+section {
+  background: rgba($white, 0.6);
+  margin-bottom: 20px;
+  padding: 20px;
+}
 article {
   width: 100%;
+}
+.wrapper {
+  padding: 20px;
+}
+footer {
+  background: rgba($white, 0.6);
+  width: 100%;
+  text-align: center;
+}
+.introduction {
+  position: relative;
+  height: 100%;
+  min-height: 322px;
+  transition: opacity 500ms linear;
+  h1, p {
+    transition: all 5s;
+
+  }
+  &.inactive {
+    opacity: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    min-height: 0;
+    h1, p {
+      transition: all 5s;
+    }
+  }
 }
