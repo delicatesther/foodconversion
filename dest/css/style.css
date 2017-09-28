@@ -263,5 +263,11 @@ header {
 	margin: 0 auto;
 }
 
-/*# sourceMappingURL=../../../../../../src/sass */
+/* line 4, src/sass/06-layout/_header.scss */
+
+header svg {
+	fill: #494840;
+}
+
+/*# sourceMappingURL=../../../../../../../../src/sass */
 
