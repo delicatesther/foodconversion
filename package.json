@@ -30,12 +30,16 @@
       , "watchify": "*"
       , "gulp-uglify": "*"
 
-
+      , "gulp-imagemin": "^2.4.0"
   },
   "paths": {
     "sass": {
       "src"             : "src/sass/",
       "dest"            : "dest/css/"
+    }
+    , "img" : {
+      "src" : "src/img/images/",
+      "dest" : "dest/img/images/"
     }
 
     , "iconfont": {

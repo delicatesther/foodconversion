@@ -21,11 +21,11 @@
   <header class="header">
       <a href="http://delicatesther.nl" target="_blank" title="Visit Delicatesther.nl">
         <svg class="delicatesther" viewBox="0 0 430 185">
-          <use xlink:href="dest/img/delicatesther.svg#Layer_1"></use>
+          <use xlink:href="dest/img/images/delicatesther.svg#Layer_1"></use>
         </svg>
       </a>
       <svg class="foodconversion" viewBox="0 0 100 30">
-        <use xlink:href="dest/img/foodconversion-logo.svg#Layer_1"></use>
+        <use xlink:href="dest/img/images/foodconversion-logo.svg#Layer_1"></use>
       </svg>
       <h1>Delicatesther Food Conversion</h1>
   </header>
@@ -45,14 +45,32 @@
       <section class="conversion-item temp">
         <header><h1>Temperature</h1></header>
         <article>
-            <input placeholder="Fahrenheit" id="fahrenheitInput" onkeyup="calculateFahrenheit();">
-            <div id="resultFahrenheit"></div>
-            <input placeholder="Celcius" id="celciusInput" onkeyup="calculateCalc();">
-            <div id="resultCelcius"></div>
+          <div class="empire">
+            <h2>Fahrenheit (&deg;F)</h2>
+            <input placeholder="Fahrenheit" id="fahrenheitInput" onkeyup="calculateCelcius();">
+          </div>
+          <div class="rebel">
+            <h2>Celcius (&deg;C)</h2>
+            <input placeholder="Celcius" id="celciusInput" onkeyup="calculateFahrenheit();">
+          </div>
         </article>
       </section>
       <section class=conversion-item "weight">
         <header><h1>Weight</h1></header>
+        <article>
+          <div class="empire">
+            <h2>Pounds (lb)</h2>
+            <input placeholder="Pounds" id="poundInput" onkeyup="calculateRebelWeight();">
+            <h2>Ounces (oz)</h2>
+            <input placeholder="Ounces" id="ounceInput" onkeyup="calculateRebelWeight();">
+          </div>
+          <div class="rebel">
+            <h2>Kilogram (kg)</h2>
+            <input placeholder="Kilogram" id="kiloInput" onkeyup="calculateEmpireWeight();">
+            <h2>Gram (g)</h2>
+            <input placeholder="Gram" id="gramInput" onkeyup="calculateEmpireWeight();">
+          </div>
+        </article>
       </section>
       <section class="conversion-item liquid">
         <header><h1>Liquid</h1></header>

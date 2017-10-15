@@ -8,7 +8,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var sass = require('gulp-sass');
 var pkg = require('./package.json');
 var paths = pkg.paths;
-
+var imagemin = require('gulp-imagemin');
 var gif = require('gulp-if');
 var autoprefixer = require('gulp-autoprefixer');
 var mmq = require('gulp-merge-media-queries');
@@ -31,6 +31,16 @@ gulp.task('style', function() {
   .pipe(autoprefixer())
   .pipe(mmq())
   .pipe(gulp.dest(paths.sass.dest));
+});
+
+// Optimize images
+gulp.task('images', function() {
+	return gulp.src((paths.img.src + '*.+(png|jpg|jpeg|gif|svg)'))
+	.pipe(imagemin({
+		interlaced: true,
+		progressive: true
+	}))
+	.pipe(gulp.dest(paths.img.dest));
 });
 
 
@@ -218,7 +228,7 @@ gulp.task('production', function (callback) {
 });
 
 gulp.task('build', function (callback) {
-  runSequence('js','spritePng','iconfont','spriteSvg','style', callback);
+  runSequence('js','spritePng','iconfont','spriteSvg', 'images', 'style', callback);
 });
 
 gulp.task('default', ['enable-watch-mode', 'js', 'style'], function () {

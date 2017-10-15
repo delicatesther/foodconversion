@@ -229,9 +229,19 @@ h1 {
 	font-size: 28px;
 	font-family: "Asap Condensed", sans-serif;
 	font-weight: 600;
+	margin-bottom: 15px;
 }
 
-/* line 10, src/sass/05-components/_typography.scss */
+/* line 11, src/sass/05-components/_typography.scss */
+
+h2 {
+	font-family: "Asap Condensed", sans-serif;
+	font-weight: 600;
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+
+/* line 17, src/sass/05-components/_typography.scss */
 
 p {
 	font-size: 16px;
@@ -240,7 +250,7 @@ p {
 	margin-bottom: 5px;
 }
 
-/* line 19, src/sass/05-components/_typography.scss */
+/* line 26, src/sass/05-components/_typography.scss */
 
 main section h1 {
 	font-size: 24px;
@@ -317,11 +327,13 @@ button:hover:before {
 
 input {
 	-webkit-appearance: none;
-	padding: 5px 10px;
+	padding: 10px 20px;
 	border: 1px solid #494840;
+	margin-bottom: 10px;
+	width: 100%;
 }
 
-/* line 5, src/sass/05-components/_inputs.scss */
+/* line 7, src/sass/05-components/_inputs.scss */
 
 input:focus {
 	outline: none;
@@ -331,12 +343,13 @@ input:focus {
 
 body {
 	background: #ffe4bb;
-	background: url("../img/bg.jpg") no-repeat;
+	background: url("../img/images/bg_2.jpg") no-repeat;
+	background-position: center;
 	background-size: cover;
 	color: #494840;
 }
 
-/* line 8, src/sass/06-layout/_layout-generic.scss */
+/* line 9, src/sass/06-layout/_layout-generic.scss */
 
 main {
 	min-height: 100vh;
@@ -349,7 +362,7 @@ main {
 	flex-direction: column;
 }
 
-/* line 13, src/sass/06-layout/_layout-generic.scss */
+/* line 14, src/sass/06-layout/_layout-generic.scss */
 
 .container {
 	display: -webkit-box;
@@ -366,7 +379,7 @@ main {
 	margin: 0 auto;
 }
 
-/* line 20, src/sass/06-layout/_layout-generic.scss */
+/* line 21, src/sass/06-layout/_layout-generic.scss */
 
 section {
 	background: rgba(255, 255, 255, 0.6);
@@ -374,21 +387,16 @@ section {
 	padding: 20px;
 }
 
-/* line 28, src/sass/06-layout/_layout-generic.scss */
+/* line 29, src/sass/06-layout/_layout-generic.scss */
 
 header {
 	display: block;
 }
 
-/* line 31, src/sass/06-layout/_layout-generic.scss */
+/* line 32, src/sass/06-layout/_layout-generic.scss */
 
 article {
 	width: 100%;
-}
-
-/* line 35, src/sass/06-layout/_layout-generic.scss */
-
-.conversion-item form {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -401,13 +409,27 @@ article {
 	justify-content: space-between;
 }
 
-/* line 41, src/sass/06-layout/_layout-generic.scss */
+/* line 38, src/sass/06-layout/_layout-generic.scss */
+
+.empire {
+	width: 50%;
+	margin: 10px 10px 0 0;
+}
+
+/* line 42, src/sass/06-layout/_layout-generic.scss */
+
+.rebel {
+	width: 50%;
+	margin: 10px 10px 0 0;
+}
+
+/* line 46, src/sass/06-layout/_layout-generic.scss */
 
 .wrapper {
 	padding: 20px;
 }
 
-/* line 44, src/sass/06-layout/_layout-generic.scss */
+/* line 49, src/sass/06-layout/_layout-generic.scss */
 
 footer {
 	background: rgba(255, 255, 255, 0.6);
@@ -415,7 +437,7 @@ footer {
 	text-align: center;
 }
 
-/* line 49, src/sass/06-layout/_layout-generic.scss */
+/* line 54, src/sass/06-layout/_layout-generic.scss */
 
 .introduction {
 	position: relative;
@@ -426,7 +448,7 @@ footer {
 	display: block;
 }
 
-/* line 55, src/sass/06-layout/_layout-generic.scss */
+/* line 60, src/sass/06-layout/_layout-generic.scss */
 
 .introduction h1,
 .introduction p {
@@ -434,7 +456,7 @@ footer {
 	transition: all 5s;
 }
 
-/* line 59, src/sass/06-layout/_layout-generic.scss */
+/* line 64, src/sass/06-layout/_layout-generic.scss */
 
 .introduction.inactive {
 	opacity: 0;
@@ -444,7 +466,7 @@ footer {
 	min-height: 0;
 }
 
-/* line 65, src/sass/06-layout/_layout-generic.scss */
+/* line 70, src/sass/06-layout/_layout-generic.scss */
 
 .introduction.inactive h1,
 .introduction.inactive p {
@@ -452,35 +474,29 @@ footer {
 	transition: all 5s;
 }
 
-/* line 1, src/sass/06-layout/_header.scss */
-
-header {
-	padding: 20px 0;
-}
-
-/* line 4, src/sass/06-layout/_header.scss */
+/* line 2, src/sass/06-layout/_header.scss */
 
 .header {
 	background: rgba(255, 255, 255, 0.6);
-	padding: 20px;
+	padding: 20px 20px 0;
 	margin-bottom: 20px;
 	position: relative;
 }
 
-/* line 9, src/sass/06-layout/_header.scss */
+/* line 7, src/sass/06-layout/_header.scss */
 
 .header h1 {
 	text-indent: -99999999px;
 }
 
-/* line 12, src/sass/06-layout/_header.scss */
+/* line 10, src/sass/06-layout/_header.scss */
 
 .header svg {
 	fill: #494840;
 	display: block;
 }
 
-/* line 16, src/sass/06-layout/_header.scss */
+/* line 14, src/sass/06-layout/_header.scss */
 
 .header .delicatesther {
 	width: 150px;
@@ -488,7 +504,7 @@ header {
 	display: block;
 }
 
-/* line 21, src/sass/06-layout/_header.scss */
+/* line 19, src/sass/06-layout/_header.scss */
 
 .header .foodconversion {
 	width: 500px;
@@ -504,11 +520,11 @@ footer p {
 	margin: 0 auto;
 }
 
-/*# sourceMappingURL=../../../../../../src/sass */
+/*# sourceMappingURL=../../../../src/sass */
 
 @media screen and (min-width: 600px) {
 
-/* line 20, src/sass/06-layout/_layout-generic.scss */
+/* line 21, src/sass/06-layout/_layout-generic.scss */
 
 section {
 	min-width: 600px;
