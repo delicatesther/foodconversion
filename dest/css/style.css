@@ -1,3 +1,15 @@
+/*--------------------------------------------------------------------------
+//
+//                        BREAKPOINTS
+//
+/*-------------------------------------------------------------------------*/
+
+/*--------------------------------------------------------------------------
+//
+//                        CLEARFIX
+//
+/*-------------------------------------------------------------------------*/
+
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -362,19 +374,40 @@ section {
 	padding: 20px;
 }
 
-/* line 25, src/sass/06-layout/_layout-generic.scss */
+/* line 28, src/sass/06-layout/_layout-generic.scss */
+
+header {
+	display: block;
+}
+
+/* line 31, src/sass/06-layout/_layout-generic.scss */
 
 article {
 	width: 100%;
 }
 
-/* line 28, src/sass/06-layout/_layout-generic.scss */
+/* line 35, src/sass/06-layout/_layout-generic.scss */
+
+.conversion-item form {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+
+/* line 41, src/sass/06-layout/_layout-generic.scss */
 
 .wrapper {
 	padding: 20px;
 }
 
-/* line 31, src/sass/06-layout/_layout-generic.scss */
+/* line 44, src/sass/06-layout/_layout-generic.scss */
 
 footer {
 	background: rgba(255, 255, 255, 0.6);
@@ -382,7 +415,7 @@ footer {
 	text-align: center;
 }
 
-/* line 36, src/sass/06-layout/_layout-generic.scss */
+/* line 49, src/sass/06-layout/_layout-generic.scss */
 
 .introduction {
 	position: relative;
@@ -390,9 +423,10 @@ footer {
 	min-height: 322px;
 	-webkit-transition: opacity 500ms linear;
 	transition: opacity 500ms linear;
+	display: block;
 }
 
-/* line 41, src/sass/06-layout/_layout-generic.scss */
+/* line 55, src/sass/06-layout/_layout-generic.scss */
 
 .introduction h1,
 .introduction p {
@@ -400,7 +434,7 @@ footer {
 	transition: all 5s;
 }
 
-/* line 45, src/sass/06-layout/_layout-generic.scss */
+/* line 59, src/sass/06-layout/_layout-generic.scss */
 
 .introduction.inactive {
 	opacity: 0;
@@ -410,7 +444,7 @@ footer {
 	min-height: 0;
 }
 
-/* line 51, src/sass/06-layout/_layout-generic.scss */
+/* line 65, src/sass/06-layout/_layout-generic.scss */
 
 .introduction.inactive h1,
 .introduction.inactive p {
@@ -471,4 +505,14 @@ footer p {
 }
 
 /*# sourceMappingURL=../../../../../../src/sass */
+
+@media screen and (min-width: 600px) {
+
+/* line 20, src/sass/06-layout/_layout-generic.scss */
+
+section {
+	min-width: 600px;
+}
+
+}
 

@@ -1,0 +1,52 @@
+button {
+  -webkit-appearance: none;
+  background: transparent;
+  padding: 10px 20px;
+  margin: 5px;
+  border: 3px solid $near-black;
+  border-radius: 15px;
+  font-family: $basefont;
+  font-weight: 600;
+  color: $near-black;
+  text-transform: uppercase;
+  font-size: 20px;
+  position: relative;
+  cursor: pointer;
+  &:before {
+    transition: all .2s;
+    background: rgba($white, 0.6);
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    display: block;
+    top: -10%;
+    left: 0;
+    border-radius: 15px;
+    z-index: -1;
+  }
+  &:hover {
+    &:before {
+      top: 0;
+      height: 100%;
+    }
+  }
+}
+
+.close {
+  width: 20px;
+  height: 20px;
+  display: block;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+  position: absolute;
+  &:before {
+    content: '';
+    @include sprite-svg(cross);
+    color: $near-black;
+    display: block;
+    width: 20px;
+    height: 20px;
+  }
+}

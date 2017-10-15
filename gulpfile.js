@@ -203,7 +203,10 @@ gulp.task('js', function () {
     //
     .pipe(gulp.dest(paths.js.dest));
   }
+  gulp.src(paths.js.src + '**/*')
+  .pipe(gulp.dest(paths.js.dest))
   return rebundle();
+
 });
 
 
@@ -220,8 +223,9 @@ gulp.task('build', function (callback) {
 
 gulp.task('default', ['enable-watch-mode', 'js', 'style'], function () {
   gulp.watch(paths.sass.src + '**/*.scss', ['style']);
-  
+  gulp.watch(paths.js.src + '**/*.js', ['js']);
+
   gulp.watch(paths.spritePng.src + '**/*.**', ['spritePng']);
-  
+
   // TODO: modify png sprites watch and add more watch tasks (svg sprites, icon fonts)
 });

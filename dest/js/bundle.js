@@ -4,7 +4,6 @@ var name = "Delicatesther Food Conversion";
 
 var gulp = true;
 
-
 },{}]},{},[1]);
 
 //# sourceMappingURL=bundle.js.map

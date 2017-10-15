@@ -1,0 +1,8 @@
+input {
+  -webkit-appearance: none;
+  padding: 5px 10px;
+  border: 1px solid $near-black;
+  &:focus {
+    outline: none;
+  }
+}

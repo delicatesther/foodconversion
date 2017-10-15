@@ -32,7 +32,7 @@
   <main>
 
     <div class="container">
-      <section class="introduction" id="introduction">
+      <!-- <section class="introduction" id="introduction">
         <header><h1>How does this work?</h1> <span class="close" onclick="closeItem();"></span></header>
         <article>
           <p>I'm sure you, too, have struggled with the annoyances of the imperial versus the metric system. Sticks of butter versus grams. <br>Fahrenheit versus Celcius.</p>
@@ -41,24 +41,26 @@
           Enter the unit you know, get the unit you need; presto!</p>
           <button onclick="closeItem();">Got it</button>
         </article>
-      </section>
-      <section class="temp">
+      </section> -->
+      <section class="conversion-item temp">
         <header><h1>Temperature</h1></header>
         <article>
-          <input placeholder="Fahrenheit" id="fahrenheit">
-          <input placeholder="Celcius" id="celcius">
+            <input placeholder="Fahrenheit" id="fahrenheitInput" onkeyup="calculateFahrenheit();">
+            <div id="resultFahrenheit"></div>
+            <input placeholder="Celcius" id="celciusInput" onkeyup="calculateCalc();">
+            <div id="resultCelcius"></div>
         </article>
       </section>
-      <section class="weight">
+      <section class=conversion-item "weight">
         <header><h1>Weight</h1></header>
       </section>
-      <section class="liquid">
+      <section class="conversion-item liquid">
         <header><h1>Liquid</h1></header>
       </section>
-      <section class="cups">
+      <section class="conversion-item cups">
         <header><h1>Cups</h1></header>
       </section>
-      <section class="misc">
+      <section class="conversion-item misc">
         <header><h1>Miscellaneous</h1></header>
       </section>
     </div>
