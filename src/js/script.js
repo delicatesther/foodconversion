@@ -24,13 +24,35 @@ calculateFahrenheit = function() {
   fillInput('fahrenheitInput', fahrenheit);
 }
 
-calculateRebelWeight = function() {
-  var kilo = poundInput.value * 0.45359237;
-  var gram = poundInput.value * 453.59237;
-  var kiloB = ounceInput.value *0.02834952;
-
-  fillInput('kiloInput', kilo);
-  fillInput('kiloInput', kiloB);
-  fillInput('gramInput', gram);
+calculateWeight = function(x, y) {
+  if (isNaN(y)) {
+    alert("Please enter a number");
+  }
+  switch(x) {
+    case  "ounceInput":
+      fillInput('gramInput', y * 28.34952);
+      fillInput('kiloInput', y * 0.02834952);
+      fillInput('poundInput', y / 16);
+      break;
+    case  "poundInput":
+      fillInput('gramInput', y * 453.59237);
+      fillInput('kiloInput', y * 0.45359237);
+      fillInput('ounceInput', y * 16);
+      break;
+    case  "kiloInput":
+      fillInput('gramInput', y * 1000);
+      fillInput('poundInput', y / 0.45359237);
+      fillInput('ounceInput', y / 0.02834952);
+      break;
+    case  "gramInput":
+      fillInput('kiloInput', y / 1000);
+      fillInput('poundInput', y / 453.59237);
+      fillInput('ounceInput', y * 28.34952);
+      break;
+    default:
+      alert("Please enter a number");
+  }
+}
+calculateCups = function() {
 
 }

@@ -1,10 +1,18 @@
-input {
+input[type="number"],
+select {
   -webkit-appearance: none;
   padding: 10px 20px;
   border: 1px solid $near-black;
+  border-radius: 0;
   margin-bottom: 10px;
   width: 100%;
   &:focus {
     outline: none;
+  }
+}
+
+form {
+  .form-row {
+    margin-bottom: 10px;
   }
 }

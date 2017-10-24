@@ -325,18 +325,27 @@ button:hover:before {
 
 /* line 1, src/sass/05-components/_inputs.scss */
 
-input {
+input[type="number"],
+select {
 	-webkit-appearance: none;
 	padding: 10px 20px;
 	border: 1px solid #494840;
+	border-radius: 0;
 	margin-bottom: 10px;
 	width: 100%;
 }
 
-/* line 7, src/sass/05-components/_inputs.scss */
+/* line 9, src/sass/05-components/_inputs.scss */
 
-input:focus {
+input[type="number"]:focus,
+select:focus {
 	outline: none;
+}
+
+/* line 15, src/sass/05-components/_inputs.scss */
+
+form .form-row {
+	margin-bottom: 10px;
 }
 
 /* line 1, src/sass/06-layout/_layout-generic.scss */
@@ -407,29 +416,54 @@ article {
 	-webkit-box-pack: justify;
 	-ms-flex-pack: justify;
 	justify-content: space-between;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
 }
 
-/* line 38, src/sass/06-layout/_layout-generic.scss */
+/* line 39, src/sass/06-layout/_layout-generic.scss */
 
 .empire {
-	width: 50%;
-	margin: 10px 10px 0 0;
+	width: 49%;
+	margin: 10px 0px 10px 0;
 }
 
-/* line 42, src/sass/06-layout/_layout-generic.scss */
+/* line 43, src/sass/06-layout/_layout-generic.scss */
 
 .rebel {
-	width: 50%;
-	margin: 10px 10px 0 0;
+	width: 49%;
+	margin: 10px 0px 10px 0;
 }
 
-/* line 46, src/sass/06-layout/_layout-generic.scss */
+/* line 47, src/sass/06-layout/_layout-generic.scss */
+
+.scum {
+	width: 100%;
+	-webkit-box-flex: 0;
+	-ms-flex: 0 0 100%;
+	flex: 0 0 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+
+/* line 52, src/sass/06-layout/_layout-generic.scss */
+
+.scum h2 {
+	width: 100%;
+	-webkit-box-flex: 0;
+	-ms-flex: 0 0 100%;
+	flex: 0 0 100%;
+}
+
+/* line 58, src/sass/06-layout/_layout-generic.scss */
 
 .wrapper {
 	padding: 20px;
 }
 
-/* line 49, src/sass/06-layout/_layout-generic.scss */
+/* line 61, src/sass/06-layout/_layout-generic.scss */
 
 footer {
 	background: rgba(255, 255, 255, 0.6);
@@ -437,7 +471,7 @@ footer {
 	text-align: center;
 }
 
-/* line 54, src/sass/06-layout/_layout-generic.scss */
+/* line 66, src/sass/06-layout/_layout-generic.scss */
 
 .introduction {
 	position: relative;
@@ -448,7 +482,7 @@ footer {
 	display: block;
 }
 
-/* line 60, src/sass/06-layout/_layout-generic.scss */
+/* line 72, src/sass/06-layout/_layout-generic.scss */
 
 .introduction h1,
 .introduction p {
@@ -456,7 +490,7 @@ footer {
 	transition: all 5s;
 }
 
-/* line 64, src/sass/06-layout/_layout-generic.scss */
+/* line 76, src/sass/06-layout/_layout-generic.scss */
 
 .introduction.inactive {
 	opacity: 0;
@@ -466,7 +500,7 @@ footer {
 	min-height: 0;
 }
 
-/* line 70, src/sass/06-layout/_layout-generic.scss */
+/* line 82, src/sass/06-layout/_layout-generic.scss */
 
 .introduction.inactive h1,
 .introduction.inactive p {
@@ -520,7 +554,7 @@ footer p {
 	margin: 0 auto;
 }
 
-/*# sourceMappingURL=../../../../src/sass */
+/*# sourceMappingURL=../../../../../../../../src/sass */
 
 @media screen and (min-width: 600px) {
 

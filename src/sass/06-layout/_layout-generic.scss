@@ -34,14 +34,26 @@ article {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .empire {
-  width: 50%;
-  margin: 10px 10px 0 0;
+  width: 49%;
+  margin: 10px 0px 10px 0;
 }
 .rebel {
-  width: 50%;
-  margin: 10px 10px 0 0;
+  width: 49%;
+  margin: 10px 0px 10px 0;
+}
+.scum {
+  width: 100%;
+  flex:  0 0 100%;
+  display: flex;
+  flex-wrap: wrap;
+  h2 {
+    width: 100%;
+    flex:  0 0 100%;
+
+  }
 }
 .wrapper {
   padding: 20px;

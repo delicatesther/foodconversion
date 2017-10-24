@@ -47,11 +47,11 @@
         <article>
           <div class="empire">
             <h2>Fahrenheit (&deg;F)</h2>
-            <input placeholder="Fahrenheit" id="fahrenheitInput" onkeyup="calculateCelcius();">
+            <input type="number" placeholder="Fahrenheit" id="fahrenheitInput" onblur="calculateCelcius();">
           </div>
           <div class="rebel">
             <h2>Celcius (&deg;C)</h2>
-            <input placeholder="Celcius" id="celciusInput" onkeyup="calculateFahrenheit();">
+            <input type="number" placeholder="Celcius" id="celciusInput" onblur="calculateFahrenheit();">
           </div>
         </article>
       </section>
@@ -60,23 +60,64 @@
         <article>
           <div class="empire">
             <h2>Pounds (lb)</h2>
-            <input placeholder="Pounds" id="poundInput" onkeyup="calculateRebelWeight();">
+            <input type="number" placeholder="Pounds" id="poundInput" onblur="calculateWeight(this.id, this.value);">
             <h2>Ounces (oz)</h2>
-            <input placeholder="Ounces" id="ounceInput" onkeyup="calculateRebelWeight();">
+            <input type="number" placeholder="Ounces" id="ounceInput" onblur="calculateWeight(this.id, this.value);">
           </div>
           <div class="rebel">
             <h2>Kilogram (kg)</h2>
-            <input placeholder="Kilogram" id="kiloInput" onkeyup="calculateEmpireWeight();">
+            <input type="number" placeholder="Kilogram" id="kiloInput" onblur="calculateWeight(this.id, this.value);">
             <h2>Gram (g)</h2>
-            <input placeholder="Gram" id="gramInput" onkeyup="calculateEmpireWeight();">
+            <input type="number" placeholder="Gram" id="gramInput" onblur="calculateWeight(this.id, this.value);">
+          </div>
+        </article>
+      </section>
+      <section class="conversion-item cups">
+        <header><h1>Cups</h1></header>
+        <article>
+          <div class="empire">
+            <form>
+              <div class="form-row">
+                <label for="cup1"></label>
+                <input type="radio" name="cupFraction" id="cup1">
+                <span>1 cup</span>
+              </div>
+              <div class="form-row">
+                <label for="cup05"></label>
+                <input type="radio" name="cupFraction" id="cup05">
+                <span>1/2 cup</span>
+              </div>
+              <div class="form-row">
+                <label for="cup33"></label>
+                <input type="radio" name="cupFraction" id="cup33">
+                <span>1/3 cup</span>
+              </div>
+              <div class="form-row">
+                <label for="cup25"></label>
+                <input type="radio" name="cupFraction" id="cup25">
+                <span>1/4 cup</span>
+              </div>
+            </form>
+          </div>
+          <div class="rebel">
+            <select>
+              <option>All-Purpose Flour and Confectioners’ Sugar</option>
+              <option>White Sugar (Granulated)</option>
+            </select>
+          </div>
+          <div class="scum">
+            <h2>Weights</h2>
+            <div class="empire">
+              <p>Ounces: <span id="cupOunce"></span></p>
+            </div>
+            <div class="rebel">
+              <p>Grams: <span id="cupGram"></span></p>
+            </div>
           </div>
         </article>
       </section>
       <section class="conversion-item liquid">
         <header><h1>Liquid</h1></header>
-      </section>
-      <section class="conversion-item cups">
-        <header><h1>Cups</h1></header>
       </section>
       <section class="conversion-item misc">
         <header><h1>Miscellaneous</h1></header>
